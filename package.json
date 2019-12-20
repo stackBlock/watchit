@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/stackBlock/watchit/issues"
   },
-  "homepage": "https://github.com/stackBlock/watchit#readme"
+  "homepage": "https://github.com/stackBlock/watchit#readme",
+  "dependencies": {
+    "caporal": "^1.3.0",
+    "chalk": "^3.0.0",
+    "chokidar": "^3.3.1",
+    "lodash.debounce": "^4.0.8"
+  }
 }
