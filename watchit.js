@@ -40,7 +40,17 @@ program
       .watch(".")
       .on("add", start)
       .on("change", start) // () => log(chalk.yellow("File changed")))
-      .on("unlink", start); // () => log(chalk.red("File unlinked")));
+      .on(
+        "unlink",
+        (start,
+        () => {
+          log(
+            chalk.red(">>>> ") +
+              chalk.yellow("* CHANGE * ") +
+              chalk.red("FILE REMOVED OR UNLINKED!!")
+          );
+        })
+      ); // () => log(chalk.red("File unlinked")));
   });
 
 // deBouce function in at deBounce.js AND lodash.debounce is installed for use
